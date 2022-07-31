@@ -16,10 +16,10 @@ Follow the comment instructions. To use this model for EBC color ratings, conver
 
 ```
 # SRM to sRGB model, multiply outputs by 255 and clip between 0 and 255
-# 5 cm transmission, CIE 1964 10 Degree Standard Observer, D65 illuminant
-r=1.0606e+00+srm*(-3.7886e-02+srm*(5.3849e-04+srm*(-2.8256e-06)))
-g=9.7374e-01+srm*(-9.3200e-02+srm*(3.5123e-03+srm*(-5.1146e-05)))
-b=1.0471e+00+srm*(-3.6802e-01+srm*(6.2125e-02+srm*(-5.9139e-03)))
+# 5 cm transmission, CIE 1931 2 Degree Standard Observer, D65 illuminant
+r=1.0291e+00+srm*(-3.2826e-02+srm*(3.6672e-04+srm*(-1.0549e-06)))
+g=9.9437e-01+srm*(-9.1981e-02+srm*(3.3968e-03+srm*(-5.0775e-05)))
+b=1.0030e+00+srm*(-3.4150e-01+srm*(5.6136e-02+srm*(-5.4250e-03)))
 ```
 
 ## References

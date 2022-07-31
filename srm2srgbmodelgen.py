@@ -21,8 +21,8 @@ import pandas as pd
 
 # Adjust the following constants to alter the model generation
 GLASS_DIAMETER_CM = 5
-XY_CIE_OBSERVER_NAME = 'CIE 1964 10 Degree Standard Observer'
-XY_CIE_ILLUMINANT_NAME = 'D65'
+CIE_OBSERVER_NAME = 'CIE 1931 2 Degree Standard Observer'
+CIE_ILLUMINANT_NAME = 'D65'
 USE_EBC_SCALE = False
 MAX_SCALE_VALUE = 50
 SCALE_STEP = 0.25
@@ -31,9 +31,9 @@ POLYFIT_DEGREE_G = 3
 POLYFIT_DEGREE_B = 3
 PRINT_HEX_TABLE = False
 
-observer = colour.MSDS_CMFS['CIE 1964 10 Degree Standard Observer']
-illuminant = colour.SDS_ILLUMINANTS['C']
-illuminant_xy = colour.CCS_ILLUMINANTS[XY_CIE_OBSERVER_NAME][XY_CIE_ILLUMINANT_NAME]
+observer = colour.MSDS_CMFS[CIE_OBSERVER_NAME]
+illuminant = colour.SDS_ILLUMINANTS[CIE_ILLUMINANT_NAME]
+illuminant_xy = colour.CCS_ILLUMINANTS[CIE_OBSERVER_NAME][CIE_ILLUMINANT_NAME]
 
 if USE_EBC_SCALE == True:
     unit_name = 'EBC'
@@ -107,7 +107,7 @@ b_text, b_code = compile_poly(b_coeff, unit_name)
 
 # Print model
 print('# ' + unit_name + ' to sRGB model, multiply outputs by 255 and clip between 0 and 255')
-print('# ' + str(GLASS_DIAMETER_CM) + ' cm transmission, ' +  XY_CIE_OBSERVER_NAME + ', ' + XY_CIE_ILLUMINANT_NAME + ' illuminant')
+print('# ' + str(GLASS_DIAMETER_CM) + ' cm transmission, ' +  CIE_OBSERVER_NAME + ', ' + CIE_ILLUMINANT_NAME + ' illuminant')
 print('r=' + r_text)
 print('g=' + g_text)
 print('b=' + b_text)
