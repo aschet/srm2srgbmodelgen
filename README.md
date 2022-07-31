@@ -1,6 +1,6 @@
 # Beer Color SRM/EBC to sRGB Model Generator
 
-This Python program, which is best run within a Jupyter Notebook, takes sRGB colors created by a spectral model as input and prints a set of polynomial equations as output. These equations enable you to translate a beer color rating in SRM/EBC into sRGB colors. Constants within the program allow you to customize the generated output.
+This Python program, which is best run within a Jupyter Notebook, takes sRGB colors created by a spectral model as input and prints a set of polynomial equations as output. These equations enable you to translate a beer color rating in SRM/EBC into sRGB colors. Constants within the program allow you to customize the generated output. Please also have a look at the [Øl farve](https://github.com/aschet/olfarve) repository.
 
 Please be aware of:
 - The color appearance of beer is depending on the environment, especially the transmission path a.k.a. glass diameter.
