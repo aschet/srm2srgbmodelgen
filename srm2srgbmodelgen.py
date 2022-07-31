@@ -82,7 +82,7 @@ def generate_rgb_data(scale):
     wl = colour.SpectralShape(380, 780, 5).range()
     for i in scale:
         srm = i * unit_conversion
-        values = 10**(-(srm / 12.7) * (0.018747 * math.e**(-(wl - 430.0) / 13.374) + 0.98226 * math.e**(-(wl - 430.0) / 80.514)) * GLASS_DIAMETER_CM)
+        values = 10**(-(srm / 12.7) * (0.02465 * math.e**(-(wl - 430.0) / 17.591) + 0.97535 * math.e**(-(wl - 430.0) / 82.122)) * GLASS_DIAMETER_CM)
         xyz = colour.sd_to_XYZ(colour.SpectralDistribution(values, wl), cmfs=observer, illuminant=illuminant) / 100.0
         rgb.append(colour.XYZ_to_sRGB(xyz, illuminant=illuminant_xy))
     return rgb
