@@ -12,7 +12,7 @@ Please be aware of:
 
 ## Example Model
 
-Follow the comment instructions. To use this model for EBC color ratings, convert by srm=ebc/1.97.
+Follow the comment instructions. To use this model for EBC color ratings, convert by srm=ebc/1.97. If you are interested in a full implemented of the spectral model, please visit take a look at the [Øl farve](https://github.com/aschet/olfarve) repository.
 
 ```
 # SRM to sRGB model, multiply outputs by 255 and clip between 0 and 255
